@@ -32,6 +32,8 @@ $products = getProducts();
                 <th scope="col">CATEGORY</th>
                 <th scope="col">Price</th>
                 <th scope="col">Discount</th>
+                <th scope="col">Colour</th>
+                <th scope="col">size</th>
                 <th scope="col" colspan="2">Actions</th>
             </tr>
         </thead>
@@ -50,7 +52,13 @@ $products = getProducts();
                     </td>
                     <td class="align-middle"><?= $product['price'] ?></td>
                     <td class="align-middle" >
-                        <?=$product['price'] *$product['discount'] ?>
+                        <?=($product['price'] - ($product['price'] * $product['discount'])) ?>
+                    </td>
+                    <td class="align-middle" >
+                        <?=$product['color_name'] ?>
+                    </td>
+                    <td class="align-middle" >
+                        <?=$product['size_name'] ?>
                     </td>
                     <td class="align-middle" ><a href="#" class="btn btn-success" >edit</a></td>
                     <td class="align-middle" ><a href="#" class="btn btn-danger" >delete</a></td>
