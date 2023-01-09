@@ -50,10 +50,10 @@ $products = getProducts();
                     </td>
                     <td class="align-middle"><?= $product['price'] ?></td>
                     <td class="align-middle" >
-                        <?= $product['discount'] ?>
+                        <?=$product['price'] *$product['discount'] ?>
                     </td>
-                    <td class="align-middle"><a href="add-product.php?product_id=<?=$p['id']?>">edit</a></td>
-                    <td class="align-middle" ><a href="add-product.php?product_id=<?=$p['id']?>">delete</a></td>
+                    <td class="align-middle" ><a href="#" class="btn btn-success" >edit</a></td>
+                    <td class="align-middle" ><a href="#" class="btn btn-danger" >delete</a></td>
                 </tr>
             <?php
             }
